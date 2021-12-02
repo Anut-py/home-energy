@@ -68,11 +68,11 @@ export class ModelViewerComponent implements AfterViewInit, OnChanges {
     element.classList.add('bordered');
     this.el.nativeElement.appendChild(element);
     this.matLoader.load(
-      `${environment.baseUrl}assets/models/${this.modelName}.mtl`,
+      `${environment.baseUrl}assets/3d/${this.modelName}.mtl`,
       (mat) => {
         this.loader.setMaterials(mat);
         this.loader.load(
-          `${environment.baseUrl}assets/models/${this.modelName}.obj`,
+          `${environment.baseUrl}assets/3d/${this.modelName}.obj`,
           (model) => {
             this.model = model;
             this.scene.add(this.model);
@@ -85,7 +85,7 @@ export class ModelViewerComponent implements AfterViewInit, OnChanges {
       undefined,
       () => {
         this.loader.load(
-          `${environment.baseUrl}assets/models/${this.modelName}.obj`,
+          `${environment.baseUrl}assets/3d/${this.modelName}.obj`,
           (model) => {
             this.model = model;
             this.scene.add(this.model);
@@ -111,11 +111,11 @@ export class ModelViewerComponent implements AfterViewInit, OnChanges {
         this.loading = false;
       } else {
         this.matLoader.load(
-          `${environment.baseUrl}assets/models/${this.modelName}.mtl`,
+          `${environment.baseUrl}assets/3d/${this.modelName}.mtl`,
           (mat) => {
             this.loader.setMaterials(mat);
             this.loader.load(
-              `${environment.baseUrl}assets/models/${this.modelName}.obj`,
+              `${environment.baseUrl}assets/3d/${this.modelName}.obj`,
               (model) => {
                 this.model = model;
                 this.scene.add(this.model);
@@ -128,7 +128,7 @@ export class ModelViewerComponent implements AfterViewInit, OnChanges {
           undefined,
           () => {
             this.loader.load(
-              `${environment.baseUrl}assets/models/${this.modelName}.obj`,
+              `${environment.baseUrl}assets/3d/${this.modelName}.obj`,
               (model) => {
                 this.model = model;
                 this.scene.add(this.model);
