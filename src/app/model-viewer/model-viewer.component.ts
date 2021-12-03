@@ -5,6 +5,8 @@ import {
   ViewChild,
   ElementRef,
   OnChanges,
+  HostListener,
+  OnInit,
 } from '@angular/core';
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
@@ -17,10 +19,8 @@ import { environment } from '../../environments/environment';
   templateUrl: './model-viewer.component.html',
   styleUrls: ['./model-viewer.component.scss'],
 })
-export class ModelViewerComponent implements AfterViewInit, OnChanges {
+export class ModelViewerComponent implements AfterViewInit, OnChanges, OnInit {
   static models: Map<string, THREE.Group> = new Map<string, THREE.Group>();
-
-  @ViewChild('container') container: ElementRef;
 
   @Input() ratio = 1;
   @Input() modelName: string;
@@ -38,6 +38,13 @@ export class ModelViewerComponent implements AfterViewInit, OnChanges {
   loading = true;
 
   constructor(private el: ElementRef) {}
+
+  ngOnInit() {
+    window.addEventListener('resize', () => {
+      this.el.nativeElement.innerHTML = '';
+      this.ngAfterViewInit();
+    });
+  }
 
   ngAfterViewInit(): void {
     this.loader = new OBJLoader();

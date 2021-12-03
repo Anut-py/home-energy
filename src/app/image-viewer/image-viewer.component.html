@@ -1,0 +1,14 @@
+<img
+  src="/assets/renders/{{ imageName }}"
+  [width]="width"
+  (click)="showDialog(imgViewer)"
+  class="clickable"
+/>
+<ng-template #imgViewer>
+  <div class="img-viewer">
+    <button class="close-btn" mat-icon-button (click)="dialogRef.close()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <img src="/assets/renders/{{ imageName }}" width="95%" />
+  </div>
+</ng-template>

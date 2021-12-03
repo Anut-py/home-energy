@@ -7,6 +7,17 @@
     <button mat-raised-button routerLink="view" routerLinkActive="mat-primary">
       View
     </button>
+    <button
+      mat-raised-button
+      routerLink="gallery"
+      routerLinkActive="mat-primary"
+    >
+      Gallery
+    </button>
+    <div class="filler"></div>
+    <button mat-raised-button color="accent" (click)="showDialog(tutorial)">
+      3D model help
+    </button>
   </mat-toolbar>
   <div class="content">
     <router-outlet></router-outlet>
@@ -19,3 +30,28 @@
     </h2>
   </mat-toolbar>
 </div>
+
+<ng-template #tutorial>
+  <div class="tutorial">
+    <button class="close-btn" mat-icon-button (click)="dialogRef.close()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <h1>3D models tutorial</h1>
+    <app-model-viewer
+      modelName="donut"
+      [ratio]="0.4"
+      class="donut"
+    ></app-model-viewer>
+    <div>
+      <p>
+        In this website, you will see interactive 3d models. This tutorial will
+        help you get started.
+      </p>
+      <p>
+        You can play around with the donut on the left. Left click and drag the
+        model to rotate it. Right click and drag to move the model. Scroll to
+        zoom in and out.
+      </p>
+    </div>
+  </div>
+</ng-template>

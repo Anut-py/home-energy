@@ -1,0 +1,12 @@
+.clickable {
+  cursor: pointer;
+}
+
+.img-viewer {
+  position: relative;
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
