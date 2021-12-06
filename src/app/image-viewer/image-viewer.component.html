@@ -9,6 +9,6 @@
     <button class="close-btn" mat-icon-button (click)="dialogRef.close()">
       <mat-icon class="white-icon">close</mat-icon>
     </button>
-    <img src="/assets/renders/{{ imageName }}" height="90%" />
+    <img src="/assets/renders/{{ imageName }}" [height]="width" />
   </div>
 </ng-template>
