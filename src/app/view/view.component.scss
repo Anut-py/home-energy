@@ -16,16 +16,27 @@ p {
   top: 50%;
   transform: translate(0, -50%);
   height: 50px !important;
-  width: 20px !important;
+  min-width: unset !important;
+  width: 40px !important;
   transition: right 100ms ease-in-out;
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
   z-index: 100;
-  box-shadow: -3px 0 -1px rgba(0, 0, 0, 0.2), 
-        -3px 0 5px 0 rgba(0, 0, 0, 0.14), 
-        -3px 0 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: -3px 0 -1px rgba(0, 0, 0, 0.2), -3px 0 5px 0 rgba(0, 0, 0, 0.14),
+    -3px 0 10px 0 rgba(0, 0, 0, 0.12);
   &.expanded {
     right: 400px;
+  }
+  .icon-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    mat-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

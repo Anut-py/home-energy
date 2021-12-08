@@ -1,5 +1,13 @@
-<div *ngFor="let term of terms" class="section">
-    <h3><b>{{term.word}}</b></h3>
-    <p><i>{{term.type}}</i></p>
-    <p>{{term.definition}}</p>
+<mat-form-field>
+  <input matInput [formControl]="searchTerm" />
+  <mat-label>Search for words and definitions</mat-label>
+</mat-form-field>
+<div *ngFor="let term of displayedTerms" class="section">
+  <h3>
+    <b>{{ term.word }}</b>
+  </h3>
+  <p>
+    <i>{{ term.type }}</i>
+  </p>
+  <p>{{ term.definition }}</p>
 </div>
