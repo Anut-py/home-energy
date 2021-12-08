@@ -9,3 +9,22 @@ app-image-viewer {
 p {
   margin-top: 10px;
 }
+
+.expand-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 50px !important;
+  width: 20px !important;
+  &.expanded {
+    right: 200px;
+  }
+}
+
+.glossary {
+  position: absolute;
+  right: 0;
+  height: 100%;
+
+}

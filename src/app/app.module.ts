@@ -13,6 +13,7 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ViewComponent } from './view/view.component';
+import { GlossaryComponent } from './glossary/glossary.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ViewComponent } from './view/view.component';
     ViewComponent,
     GalleryComponent,
     ImageViewerComponent,
+    GlossaryComponent,
   ],
   imports: [
     BrowserModule,

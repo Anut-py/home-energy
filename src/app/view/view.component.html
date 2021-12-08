@@ -182,3 +182,12 @@
   from reaching your house. It also plays a role in cleaning up the greenhouse gases released by your house. These
   factors make trees and vegetation both energy efficient and environmentally friendly.
 </p>
+<button mat-button class="expand-btn"
+        (click)="glossaryExpanded = !glossaryExpanded"
+        [class.expanded]="glossaryExpanded">
+  <mat-icon *ngIf="!glossaryExpanded">arrow_left</mat-icon>
+  <mat-icon *ngIf="glossaryExpanded">arrow_right</mat-icon>
+</button>
+<div class="glossary">
+  <app-glossary></app-glossary>
+</div>
