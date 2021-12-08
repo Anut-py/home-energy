@@ -20,6 +20,7 @@ p {
   transition: right 100ms ease-in-out;
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
+  z-index: 100;
   &.expanded {
     right: 400px;
   }
@@ -33,6 +34,7 @@ p {
   width: 0;
   background-color: white;
   transition: width 100ms ease-in-out;
+  z-index: 99;
   &.expanded {
     width: 400px;
   }
