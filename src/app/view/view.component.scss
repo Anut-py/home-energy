@@ -17,6 +17,7 @@ p {
   transform: translate(0, -50%);
   height: 50px !important;
   width: 20px !important;
+  transition: right 100ms ease-in-out;
   &.expanded {
     right: 400px;
   }
@@ -29,6 +30,7 @@ p {
   height: 100%;
   width: 0;
   background-color: white;
+  transition: width 100ms ease-in-out;
   &.expanded {
     width: 400px;
   }
