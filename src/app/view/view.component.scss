@@ -33,9 +33,10 @@ p {
   width: 0;
   background-color: white;
   transition: width 100ms ease-in-out;
-  padding: 20px;
-  box-sizing: border-box;
   &.expanded {
     width: 400px;
+  }
+  .content {
+    margin: 20px;
   }
 }
