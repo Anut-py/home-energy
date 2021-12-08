@@ -21,6 +21,9 @@ p {
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
   z-index: 100;
+  box-shadow: -2px 0 -1px rgba(0, 0, 0, 0.2), 
+        -2px 0 5px 0 rgba(0, 0, 0, 0.14), 
+        -2px 0 10px 0 rgba(0, 0, 0, 0.12);
   &.expanded {
     right: 400px;
   }
