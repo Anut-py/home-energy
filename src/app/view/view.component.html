@@ -185,7 +185,8 @@
 <button mat-raised-button class="expand-btn mat-elevation-z4"
         (click)="glossaryExpanded = !glossaryExpanded"
         [class.expanded]="glossaryExpanded"
-        color="accent">
+        color="accent"
+        [matTooltip]="(glossaryExpanded ? 'Close' : 'Open') + ' the glossary'">
   <mat-icon *ngIf="!glossaryExpanded">arrow_left</mat-icon>
   <mat-icon *ngIf="glossaryExpanded">arrow_right</mat-icon>
 </button>

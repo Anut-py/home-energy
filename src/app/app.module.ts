@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +32,7 @@ import { GlossaryComponent } from './glossary/glossary.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatTooltipModule,
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
