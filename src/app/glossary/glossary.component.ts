@@ -13,14 +13,14 @@ export class GlossaryComponent implements OnInit {
       definition: 'Describing something as having a high energy efficiency'
     },
     {
-      word: 'energy efficieny',
+      word: 'energy efficiency',
       type: 'noun',
       definition: 'A percentage that shows how much input energy is converted to useful output'
     },
     {
       word: 'insulator',
       type: 'noun',
-      definition: 'Something that doesn\'t let heat through easily'
+      definition: 'A material that prevents energy transfer'
     },
     {
       word: 'solar energy',
