@@ -18,6 +18,8 @@ p {
   height: 50px !important;
   width: 20px !important;
   transition: right 100ms ease-in-out;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
   &.expanded {
     right: 400px;
   }
@@ -31,6 +33,7 @@ p {
   width: 0;
   background-color: white;
   transition: width 100ms ease-in-out;
+  padding: 20px;
   &.expanded {
     width: 400px;
   }
