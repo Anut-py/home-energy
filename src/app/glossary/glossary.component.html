@@ -1,1 +1,5 @@
-<p>Glossary goes here</p>
+<div *ngFor="let term of terms" class="section">
+    <h3><b>{{term.word}}</b></h3>
+    <p><i>{{term.type}}</i></p>
+    <p>{{term.definition}}</p>
+</div>
