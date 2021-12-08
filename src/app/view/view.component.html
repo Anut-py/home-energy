@@ -184,10 +184,11 @@
 </p>
 <button mat-button class="expand-btn"
         (click)="glossaryExpanded = !glossaryExpanded"
-        [class.expanded]="glossaryExpanded">
+        [class.expanded]="glossaryExpanded"
+        color="accent">
   <mat-icon *ngIf="!glossaryExpanded">arrow_left</mat-icon>
   <mat-icon *ngIf="glossaryExpanded">arrow_right</mat-icon>
 </button>
-<div class="glossary">
+<div class="glossary" [class.expanded]="glossaryExpanded">
   <app-glossary></app-glossary>
 </div>

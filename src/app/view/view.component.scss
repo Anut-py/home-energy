@@ -18,7 +18,7 @@ p {
   height: 50px !important;
   width: 20px !important;
   &.expanded {
-    right: 200px;
+    right: 400px;
   }
 }
 
@@ -26,5 +26,9 @@ p {
   position: absolute;
   right: 0;
   height: 100%;
-
+  width: 0;
+  background-color: white;
+  &.expanded {
+    width: 400px;
+  }
 }
