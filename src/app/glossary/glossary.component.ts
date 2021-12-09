@@ -65,7 +65,7 @@ export class GlossaryComponent implements OnInit {
             let titleMatch = false;
             let titleContains = false;
             let definitionContains = (
-              x.definition.match(new RegExp(key, 'g')) || []
+              x.definition.match(new RegExp(key, 'g', 'i')) || []
             ).length;
             if (x.word === key) titleMatch = true;
             if (x.word.includes(key)) titleContains = true;
