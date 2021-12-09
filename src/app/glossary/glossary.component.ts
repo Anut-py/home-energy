@@ -84,7 +84,7 @@ export class GlossaryComponent implements OnInit {
             if (!x.titleMatch && y.titleMatch) return 1;
             if (x.titleContains && !y.titleContains) return -1;
             if (!x.titleContains && y.titleContains) return 1;
-            const defDiff = x.definitionContains - y.definitionContains;
+            const defDiff = y.definitionContains - x.definitionContains;
             if (defDiff) return defDiff;
             return x.value.word.localeCompare(y.value.word);
           })
