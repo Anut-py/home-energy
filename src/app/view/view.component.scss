@@ -26,11 +26,16 @@ p {
     -3px 0 10px 0 rgba(0, 0, 0, 0.12);
   &.expanded {
     right: 400px;
+    .icon-container {
+      transform: rotateZ(180deg);
+    }
   }
   .icon-container {
     position: relative;
     height: 100%;
     width: 100%;
+    transform: rotateZ(0);
+    transition: transform 100ms ease-in-out;
     mat-icon {
       position: absolute;
       top: 50%;
